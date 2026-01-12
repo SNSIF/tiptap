@@ -1,0 +1,215 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+  font-weight: 100 900; /* variable font 범위 */
+  font-style: normal;
+}
+
+* {
+  font-family: "Inter", sans-serif;
+  -webkit-user-drag: none;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+/* 모든 요소의 스크롤바 숨기기 (Chrome, Safari, Edge) */
+*::-webkit-scrollbar {
+  display: none;
+}
+
+/* Firefox: 스크롤바 너비를 0으로 설정 */
+html {
+  scrollbar-width: none; /* Firefox */
+}
+
+.hide_scroll {
+  -ms-overflow-style: none; /* IE, Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* 항상 표시되는 스크롤바 (Chrome, Safari, Edge) */
+.scrollbar-visible::-webkit-scrollbar {
+  width: 6px; /* 세로 스크롤바 두께 */
+  height: 8px; /* 가로 스크롤바 두께 */
+}
+
+.scrollbar-visible::-webkit-scrollbar-track {
+  background: #ffffff; /* 트랙 색상 */
+  border-radius: 9999px;
+}
+
+.scrollbar-visible::-webkit-scrollbar-thumb {
+  background-color: #ffffff; /* 썸 색상 */
+  border-radius: 9999px;
+  border: 2px solid #f1f1f1; /* 트랙과의 간격 */
+}
+
+.scrollbar-visible::-webkit-scrollbar-thumb:hover {
+  background-color: #ffffff; /* hover 시 진해짐 */
+}
+
+/* Firefox 대응 */
+.scrollbar-visible {
+  scrollbar-width: thin; /* 얇은 스크롤바 */
+  scrollbar-color: #ffffff #f1f1f1; /* thumb, track */
+}
+
+body {
+  margin: 0;
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+// =========== DEPRECATE ===========
+
+@font-face {
+  font-family: "Apple";
+  src: url("/fonts/AppleSDGothicNeoL.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto-VariableFont_wdth,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gmarket";
+  src: url("/fonts/GmarketSansTTFMedium.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+.Gmarket {
+  font-family: "Gmarket", sans-serif;
+}
+
+.Apple {
+  font-family: "Apple", sans-serif;
+}
+
+.Roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+.ProseMirror,
+.ProseMirror * {
+  -webkit-user-drag: auto;
+  user-select: auto;
+}
+
+.ProseMirror img {
+  margin: 3px;
+}
+
+.ProseMirror .ProseMirror-selectednode img {
+  outline: 4px solid #000000;
+  outline-offset: 1px;
+  border-radius: 6px;
+}
+
+.ProseMirror ol,
+.ProseMirror ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+.ProseMirror ol {
+  list-style: decimal;
+}
+
+.ProseMirror ul[data-type="taskList"] {
+  list-style: none;
+  padding-left: 3px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.ProseMirror ul[data-type="taskList"] li {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.ProseMirror ul[data-type="taskList"] li label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.ProseMirror ul[data-type="taskList"] li input {
+  width: 16px;
+  height: 16px;
+  accent-color: #1c1c1c;
+  border-color: #9ca3af;
+  border-radius: 6px;
+}
+
+.ProseMirror ul[data-type="taskList"] li > div {
+  flex: 1;
+  min-width: 0;
+}
+
+.ProseMirror ul[data-type="taskList"] li[data-checked="true"] p {
+  text-decoration: line-through;
+  color: #374151;
+  -webkit-user-drag: none;
+}
+
+.ProseMirror p::selection,
+.ProseMirror span::selection {
+  background: #000000;
+  color: #ffffff;
+}
+
+.ProseMirror pre ::selection {
+  background: #000000;
+  color: #ffffff;
+}
+
+.ProseMirror pre,
+.ProseMirror code {
+  -webkit-user-drag: none;
+}
+
+[data-node-view-wrapper],
+[data-node-view-wrapper] span {
+  font-family: Consolas, "Courier New", monospace;
+}
+
+.ProseMirror code {
+  -webkit-user-drag: none;
+  background: #ededeb;
+  padding: 1px;
+  padding-left: 6px;
+  padding-right: 6px;
+  color: #eb5e5e;
+  border-radius: 6px;
+}
+
+hr {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+a {
+  color: #3b82f6;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+pre,
+pre * {
+  user-select: text !important;
+}
