@@ -13,6 +13,7 @@
 
 ## 데모 & 스크린샷 (Demo & Screenshots)
 <img width="1923" height="1081" alt="제목 없음" src="https://github.com/user-attachments/assets/a7e43c1c-f8e0-4fa3-8cd3-93b71e11a263" />
+<img width="1920" height="1080" alt="제목 없음1" src="https://github.com/user-attachments/assets/cf97c02a-a82e-4f3b-8708-bd34969b2cbf" />
 
 - 실제 사용자가 사용할 수 있는 화면입니다. 
 - 보여지는 화면 외에도 볼드, 이탤릭 등 기본적인 기능과 이미지 삽입, 코드 삽입, 링크 삽입 등의 기능이 존재합니다.
